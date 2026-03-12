@@ -5,39 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Undangan Pernikahan Hengky & Jernih</title>
 
+<!-- OG Preview untuk share WA/FB -->
 <meta property="og:title" content="Undangan Pernikahan Hengky & Jernih">
 <meta property="og:description" content="Kami mengundang Anda untuk hadir dalam acara pernikahan kami.">
 <meta property="og:image" content="https://live.staticflickr.com/65535/55143444905_1363ba21be_b.jpg">
+<meta property="og:url" content="https://idam.lovestoblog.com/hengky-dan-jernih/">
 <meta property="og:type" content="website">
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Undangan Hengky & Jernih">
+<meta name="twitter:description" content="Kami mengundang Anda untuk hadir dalam acara pernikahan kami.">
+<meta name="twitter:image" content="https://live.staticflickr.com/65535/55143444905_1363ba21be_b.jpg">
+
+<!-- Redirect cepat menggunakan meta refresh -->
+<meta id="redirect-meta" http-equiv="refresh" content="0;url=https://idam.lovestoblog.com/hengky-dan-jernih/">
+
+<!-- Backup redirect JS untuk browser yang tidak support meta refresh -->
 <script>
-  (function(){
-      // 1. Ambil parameter dari URL (misal: ?to=A/I Serlin)
-      const params = new URLSearchParams(window.location.search);
-      
-      // 2. Kita ambil dari "to" (sesuai generator PHP) atau "nama" sebagai backup
-      const namaTamu = params.get("to") || params.get("nama") || "";
-      
-      // 3. Alamat tujuan (Website utama Anda)
-      // Gunakan encodeURIComponent agar karakter seperti "/" tetap aman saat dilempar
-      const targetUrl = `https://idam.lovestoblog.com/hengky-dan-jernih/?to=${encodeURIComponent(namaTamu)}`;
-      
-      // 4. Eksekusi Redirect
-      window.location.href = targetUrl;
-  })();
+  (function(){
+      const params = new URLSearchParams(window.location.search);
+      const nama = params.get("nama") || "";
+      const target = `https://idam.lovestoblog.com/hengky-dan-jernih/?nama=${encodeURIComponent(nama)}`;
+      const meta = document.getElementById("redirect-meta");
+      if(meta) meta.setAttribute("content", "0;url=" + target);
+      // fallback JS redirect
+      window.location.href = target;
+  })();
 </script>
 </head>
 <body>
-    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
-        <p>Sedang mengarahkan ke undangan...</p>
-        <p>Jika tidak otomatis, <a id="fallback-link" href="https://idam.lovestoblog.com/hengky-dan-jernih/">klik di sini</a>.</p>
-    </div>
-
-    <script>
-        // Update link manual jika redirect otomatis gagal
-        const params = new URLSearchParams(window.location.search);
-        const nama = params.get("to") || params.get("nama") || "";
-        document.getElementById("fallback-link").href = `https://idam.lovestoblog.com/hengky-dan-jernih/?to=${encodeURIComponent(nama)}`;
-    </script>
+<p>Jika tidak diarahkan otomatis, <a href="https://idam.lovestoblog.com/hengky-dan-jernih/">klik di sini</a>.</p>
 </body>
 </html>
